@@ -1,6 +1,6 @@
 import React from "react";
 import * as S from "./Main.Style";
-import Header from "../Header/Header";
+import Header from "../../components/Header/Header";
 
 const Main = () => {
   return (
