@@ -1,7 +1,9 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Main from "./pages/Main/Main";
 import GlobalStyles from "./styles/GlobalStyles";
+import Main from "./pages/Main/Main";
+import Weight from "./pages/Weight/Weight";
+import Exercise from "./pages/Exercise/Exercise";
 
 const App = () => {
   return (
@@ -12,23 +14,23 @@ const App = () => {
           path='/'
           element={<Main />}
         />
-        {/* 
-        <Route
+
+        {/* <Route
           path='/diet'
-          component={Diet}
-        />
+          element={<Diet/>}
+        /> */}
         <Route
           path='/weight'
-          component={Weight}
+          element={<Weight />}
         />
         <Route
           path='/exercise'
-          component={Exercise}
+          element={<Exercise />}
         />
-        <Route
+        {/* <Route
           path='/profile'
-          component={Profile}
-        /> */}
+          element={<Profile/>}
+        />  */}
       </Routes>
     </>
   );

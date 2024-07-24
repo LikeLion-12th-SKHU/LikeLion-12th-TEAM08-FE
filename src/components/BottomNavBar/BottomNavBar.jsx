@@ -1,24 +1,44 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import * as S from "./BottomNavBar.Style";
 
 const BottomNavBar = () => {
   return (
     <S.BottomNavBar>
       <S.NavItem>
-        <Link to='/'>🏠</Link>
+        <NavLink
+          to='/'
+          className={({ isActive }) => (isActive ? "active" : "")}>
+          🏠
+        </NavLink>
       </S.NavItem>
       <S.NavItem>
-        <Link to='/diet'>🥄</Link>
+        <NavLink
+          to='/diet'
+          className={({ isActive }) => (isActive ? "active" : "")}>
+          🥄
+        </NavLink>
       </S.NavItem>
       <S.NavItem>
-        <Link to='/weight'>🕑</Link>
+        <NavLink
+          to='/weight'
+          className={({ isActive }) => (isActive ? "active" : "")}>
+          🕑
+        </NavLink>
       </S.NavItem>
       <S.NavItem>
-        <Link to='/exercise'>💪</Link>
+        <NavLink
+          to='/exercise'
+          className={({ isActive }) => (isActive ? "active" : "")}>
+          💪
+        </NavLink>
       </S.NavItem>
       <S.NavItem>
-        <Link to='/profile'>🧑</Link>
+        <NavLink
+          to='/profile'
+          className={({ isActive }) => (isActive ? "active" : "")}>
+          🧑
+        </NavLink>
       </S.NavItem>
     </S.BottomNavBar>
   );

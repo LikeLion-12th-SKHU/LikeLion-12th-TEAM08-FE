@@ -5,10 +5,11 @@ import BottomNavBar from "../../components/BottomNavBar/BottomNavBar";
 
 const Main = () => {
   return (
-    <S.MainContainer>
+    <>
       <Header />
+      <S.MainContainer>메인 페이지</S.MainContainer>
       <BottomNavBar />
-    </S.MainContainer>
+    </>
   );
 };
 
