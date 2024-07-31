@@ -81,21 +81,19 @@ const Exercise = () => {
                 </S.Label>
                 <S.Input
                   type='number'
-                  placeholder='0'
+                  placeholder='분'
                   value={inputTime}
                   onChange={(e) => setInputTime(e.target.value)}
                 />{" "}
-                분
                 <S.Label>
                   소모 칼로리 <S.Optional>(선택)</S.Optional>
                 </S.Label>
                 <S.Input
                   type='number'
-                  placeholder='0'
+                  placeholder='Kcal'
                   value={inputCalories}
                   onChange={(e) => setInputCalories(e.target.value)}
                 />{" "}
-                kcal
                 <S.Note>* 칼로리를 입력하지 않으면 0으로 자동 입력돼요</S.Note>
                 <S.Note>
                   * 자유 입력 운동은 1회용이라 별도 저장되지 않아요

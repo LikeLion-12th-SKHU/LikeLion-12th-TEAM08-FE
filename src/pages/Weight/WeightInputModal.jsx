@@ -1,10 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import * as S from "./Weight.Style";
 
 const WeightInputModal = ({ closeModal }) => {
   const [weight, setWeight] = useState("");
   const [isButtonActive, setIsButtonActive] = useState(false);
+
+  useEffect(() => {
+    const fetchWeight = async () => {
+      try {
+        const response = await axios.get("https://example.com/api/weight");
+        const { weight } = response.data;
+        setWeight(weight);
+      } catch (error) {
+        console.error("체중 데이터를 불러오는 중 에러:", error);
+      }
+    };
+
+    fetchWeight();
+  }, []);
 
   const handleWeightChange = (e) => {
     setWeight(e.target.value);
@@ -33,7 +47,7 @@ const WeightInputModal = ({ closeModal }) => {
           type='number'
           value={weight}
           onChange={handleWeightChange}
-          placeholder='00.0 kg'
+          placeholder={weight ? `${weight} kg` : "00.0 kg"}
         />
         <S.Button
           onClick={submitWeight}

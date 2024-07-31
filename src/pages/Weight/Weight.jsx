@@ -26,9 +26,9 @@ function Weight() {
   }, []);
 
   return (
-    <S.PageContainer>
+    <>
       <Header />
-      <S.WeightContainer>
+      <S.PageContainer>
         <S.Title>나의 변화</S.Title>
         <S.WeightDisplay>오늘 내 체중은?</S.WeightDisplay>
         <S.Dial>{weight} kg</S.Dial>
@@ -42,9 +42,9 @@ function Weight() {
             }}
           />
         )}
-      </S.WeightContainer>
+      </S.PageContainer>
       <BottomNavBar />
-    </S.PageContainer>
+    </>
   );
 }
 

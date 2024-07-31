@@ -7,8 +7,8 @@ import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
 function Main() {
-  const [consumedCalories, setConsumedCalories] = useState(0);
-  const [totalCalories, setTotalCalories] = useState(0);
+  const [consumedCalories, setConsumedCalories] = useState(10);
+  const [totalCalories, setTotalCalories] = useState(100);
   const [consumedCarbs, setConsumedCarbs] = useState(0);
   const [totalCarbs, setTotalCarbs] = useState(0);
   const [consumedProtein, setConsumedProtein] = useState(0);
@@ -62,8 +62,8 @@ function Main() {
           <CircularProgressbar
             value={caloriePercentage}
             styles={buildStyles({
-              pathColor: "#FF8895",
-              trailColor: "#FFE3E3",
+              pathColor: "#FFE3E3",
+              trailColor: "#FF8895",
             })}
             strokeWidth={15}
           />
