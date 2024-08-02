@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Bunny from "../bunny.png"; // Import the bunny image
 
 const Container = styled.div`
   display: flex;
